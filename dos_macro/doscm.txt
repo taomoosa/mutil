@@ -1,0 +1,15 @@
+#command ilne
+excel.exe /e sample.xlsm!test_macro
+
+#powershell
+# Excelを起動する
+$excel = New-Object -ComObject Excel.Application
+
+# Excelファイルを開く
+$workbook = $excel.Workbooks.Open("path/to/excel/file.xlsx")
+
+# マクロを実行する
+$excel.Application.Run("test_macro")
+
+# Excelを終了する
+$excel.Quit()
